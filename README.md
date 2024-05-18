@@ -1,30 +1,53 @@
-# shared
+# gee-ui
 
-> Made with create-react-library
+React (TypeScript) component library which serves as a thin wrapper library around [shadcn/ui](https://ui.shadcn.com/). Unlock the same ease of use and customization for all components but with a single source of truth library.
 
-[![NPM](https://img.shields.io/npm/v/shared.svg)](https://www.npmjs.com/package/shared) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+shadcn has been the go-to choice for a ton of React applications, after using it within multiple projects I came across 2 problems which this library aims to solve:
 
-## Install
+1. Dependency management
 
-```bash
-npm install --save shared
+There are a lot of times where you have to install dependencies like [Radix](https://www.radix-ui.com/) to get the components working end-to-end. These dependencies can quickly add up leaving you with the responsibility to maintain these dependencies over time. Instead of maintaining 10+ dependencies wouldn't it be nice to just maintain one?
+
+**Before**
+
 ```
 
-## Usage
+"@radix-ui/react-avatar": "^1.0.4",
+"@radix-ui/react-dialog": "^1.0.5",
+"@radix-ui/react-dropdown-menu": "^2.0.6",
+"@radix-ui/react-label": "^2.0.2",
+"@radix-ui/react-popover": "^1.0.7",
+"@radix-ui/react-scroll-area": "^1.0.5",
+"@radix-ui/react-select": "^2.0.0",
+"@radix-ui/react-slot": "^1.0.2",
+"@radix-ui/react-switch": "^1.0.3",
+"class-variance-authority": "^0.7.0",
+"clsx": "^2.1.0",
+"date-fns": "^3.6.0",
+"lucide-react": "^0.368.0",
+"react-day-picker": "^8.10.1",
+"tailwind-merge": "^2.2.2",
+"tailwindcss-animate": "^1.0.7",
+... etc. hopefully you get my point
 
-```tsx
-import React, { Component } from 'react'
-
-import MyComponent from 'shared'
-import 'shared/dist/index.css'
-
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
-}
 ```
 
-## License
+**After**
 
-MIT © [michael-gee](https://github.com/michael-gee)
+```
+"gee-ui": "^1.0.0"
+```
+
+2. Duplication of the same work in multiple projects
+
+The problem above multiplies over time especially if you use it in multiple projects.
+
+A big inspiration for this library is the React 19 release [ref as a prop](https://react.dev/blog/2024/04/25/react-19#ref-as-a-prop) change. This is a long awaited change especially for someone who uses [react-hook-form](https://react-hook-form.com/) which relies on refs to coordinate form changes. The only thing I dread about these changes is the amount of components I will have to remove `forwardRef` from.
+
+Before
+
+![Large Github pull request](https://res.cloudinary.com/michaelgee/image/upload/v1716049756/Screenshot_2024-05-18_at_12.29.00_PM_q8pf9h.png)
+
+After
+
+`"gee-ui": "^1.0.0""` -> `"gee-ui": "^2.0.0"`
