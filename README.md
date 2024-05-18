@@ -44,10 +44,10 @@ The problem above multiplies over time especially if you use it in multiple proj
 
 A big inspiration for this library is the React 19 release [ref as a prop](https://react.dev/blog/2024/04/25/react-19#ref-as-a-prop) change. This is a long awaited change especially for someone who uses [react-hook-form](https://react-hook-form.com/) which relies on refs to coordinate form changes. The only thing I dread about these changes is the amount of components I will have to remove `forwardRef` from.
 
-Before
+**Before**
 
 ![Large Github pull request](https://res.cloudinary.com/michaelgee/image/upload/v1716049756/Screenshot_2024-05-18_at_12.29.00_PM_q8pf9h.png)
 
-After
+**After**
 
 `"gee-ui": "^1.0.0""` -> `"gee-ui": "^2.0.0"`

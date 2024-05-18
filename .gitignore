@@ -1,7 +1,9 @@
 .DS_Store
 node_modules
 dist
-storybook-static
 
 .env
 .env.local
+
+storybook-static
+*storybook.log
