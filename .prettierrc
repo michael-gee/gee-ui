@@ -5,7 +5,6 @@
   "printWidth": 120,
   "arrowParens": "avoid",
   "trailingComma": "none",
-  "useTabs": true,
   "tabWidth": 2,
   "bracketSameLine": false,
   "endOfLine": "auto"
