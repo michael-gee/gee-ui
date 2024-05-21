@@ -1,11 +1,10 @@
 import * as React from 'react';
 import { Slot } from '@radix-ui/react-slot';
 import { cva, type VariantProps } from 'cva';
-
 import { cn } from '../utils';
 
 const buttonVariants = cva(
-  'inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50',
+  'inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium text-foreground transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50',
   {
     variants: {
       variant: {
@@ -45,3 +44,19 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
 Button.displayName = 'Button';
 export { Button, buttonVariants };
+
+export enum ButtonVariant {
+  DEFAULT = 'default',
+  SECONDARY = 'secondary',
+  OUTLINE = 'outline',
+  DESTRUCTIVE = 'destructive',
+  GHOST = 'ghost',
+  LINK = 'link'
+}
+
+export enum ButtonSize {
+  DEFAULT = 'default',
+  SM = 'sm',
+  LG = 'lg',
+  ICON = 'icon'
+}

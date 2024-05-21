@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
-import { Button } from './';
-import { withDarkMode } from '../internal/storybook-utils';
+import { Button, ButtonSize, ButtonVariant } from './';
+import { withDarkMode } from '../_internal/storybook-utils';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
@@ -14,9 +14,37 @@ const meta = {
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
   // More on argTypes: https://storybook.js.org/docs/api/argtypes
-  // argTypes: {},
+  argTypes: {
+    size: {
+      type: 'string',
+      control: {
+        type: 'select'
+      },
+      mapping: ButtonSize,
+      description: 'The size of the button',
+      options: Object.values(ButtonSize)
+    },
+    variant: {
+      type: 'string',
+      control: {
+        type: 'select'
+      },
+      mapping: ButtonVariant,
+      description: 'The variant of the button',
+      options: Object.values(ButtonVariant)
+    },
+    asChild: {
+      type: 'boolean',
+      description: 'Render as a child component',
+      table: {
+        disable: true
+      }
+    }
+  },
   // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
   args: {
+    size: 'default',
+    variant: 'default',
     onClick: fn()
   }
 } satisfies Meta<typeof Button>;
