@@ -45,7 +45,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 Button.displayName = 'Button';
 export { Button, buttonVariants };
 
-export enum ButtonVariant {
+export enum ButtonVariants {
   DEFAULT = 'default',
   SECONDARY = 'secondary',
   OUTLINE = 'outline',
@@ -54,7 +54,7 @@ export enum ButtonVariant {
   LINK = 'link'
 }
 
-export enum ButtonSize {
+export enum ButtonSizes {
   DEFAULT = 'default',
   SM = 'sm',
   LG = 'lg',

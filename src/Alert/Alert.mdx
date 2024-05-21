@@ -1,0 +1,32 @@
+import { Canvas, Meta, Story } from '@storybook/blocks';
+import { Alert, AlertTitle, AlertDescription } from './';
+import * as AlertStories from './Alert.stories';
+import { DarkModeContainer } from '../_internal/storybook-utils';
+
+# Alert
+
+<Meta of={AlertStories} />
+
+### Default
+
+<Canvas of={AlertStories.Default} />
+
+### Dark Mode
+
+<DarkModeContainer>
+  <Story of={AlertStories.DarkMode} />
+</DarkModeContainer>
+
+### Destructive
+
+<Canvas of={AlertStories.Destructive} />
+
+### Destructive (Dark)
+
+<DarkModeContainer>
+  <Story of={AlertStories.DestructiveDark} />
+</DarkModeContainer>
+
+### With Icon
+
+<Canvas of={AlertStories.WithIcon} />

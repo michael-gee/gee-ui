@@ -1,6 +1,5 @@
-// import { fn } from '@storybook/test';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from './';
-import { withDarkMode } from '../_internal/storybook-utils';
+import { withDarkMode, darkModeParams } from '../_internal/storybook-utils';
 import mdx from './Accordion.mdx';
 
 export default {
@@ -10,7 +9,8 @@ export default {
   parameters: {
     docs: {
       page: mdx
-    }
+    },
+    backgrounds: { disable: true }
   }
 };
 
@@ -34,11 +34,6 @@ export const Default = () => {
     </Accordion>
   );
 };
-Default.parameters = {
-  backgrounds: {
-    disable: true
-  }
-};
 
 export const DarkMode = () => {
   return (
@@ -60,11 +55,7 @@ export const DarkMode = () => {
     </Accordion>
   );
 };
-DarkMode.parameters = {
-  backgrounds: {
-    default: 'dark'
-  }
-};
+DarkMode.parameters = darkModeParams;
 DarkMode.decorators = [withDarkMode];
 
 export const Multiple = () => {
@@ -86,10 +77,4 @@ export const Multiple = () => {
       </AccordionItem>
     </Accordion>
   );
-};
-
-Multiple.parameters = {
-  backgrounds: {
-    disable: true
-  }
 };

@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
-import { Button, ButtonSize, ButtonVariant } from './';
-import { withDarkMode } from '../_internal/storybook-utils';
+import { Button, ButtonSizes, ButtonVariants } from './';
+import { withDarkMode, darkModeParams } from '../_internal/storybook-utils';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
@@ -9,7 +9,8 @@ const meta = {
   component: Button,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
-    layout: 'centered'
+    layout: 'centered',
+    backgrounds: { disable: true }
   },
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
@@ -20,18 +21,18 @@ const meta = {
       control: {
         type: 'select'
       },
-      mapping: ButtonSize,
+      mapping: ButtonSizes,
       description: 'The size of the button',
-      options: Object.values(ButtonSize)
+      options: Object.values(ButtonSizes)
     },
     variant: {
       type: 'string',
       control: {
         type: 'select'
       },
-      mapping: ButtonVariant,
+      mapping: ButtonVariants,
       description: 'The variant of the button',
-      options: Object.values(ButtonVariant)
+      options: Object.values(ButtonVariants)
     },
     asChild: {
       type: 'boolean',
@@ -67,11 +68,7 @@ export const PrimaryDark: Story = {
     variant: 'default',
     children: 'Primary Button'
   },
-  parameters: {
-    backgrounds: {
-      default: 'dark'
-    }
-  },
+  parameters: darkModeParams,
   decorators: [withDarkMode]
 };
 
@@ -88,11 +85,7 @@ export const SecondaryDark: Story = {
     variant: 'secondary',
     children: 'Secondary Button'
   },
-  parameters: {
-    backgrounds: {
-      default: 'dark'
-    }
-  },
+  parameters: darkModeParams,
   decorators: [withDarkMode]
 };
 
@@ -109,11 +102,7 @@ export const DestructiveDark: Story = {
     variant: 'destructive',
     children: 'Destructive Button'
   },
-  parameters: {
-    backgrounds: {
-      default: 'dark'
-    }
-  },
+  parameters: darkModeParams,
   decorators: [withDarkMode]
 };
 
@@ -130,11 +119,7 @@ export const OutlineDark: Story = {
     variant: 'outline',
     children: 'Outline Button'
   },
-  parameters: {
-    backgrounds: {
-      default: 'dark'
-    }
-  },
+  parameters: darkModeParams,
   decorators: [withDarkMode]
 };
 
@@ -151,11 +136,7 @@ export const GhostDark: Story = {
     variant: 'ghost',
     children: 'Ghost Button'
   },
-  parameters: {
-    backgrounds: {
-      default: 'dark'
-    }
-  },
+  parameters: darkModeParams,
   decorators: [withDarkMode]
 };
 
@@ -172,11 +153,7 @@ export const LinkDark: Story = {
     variant: 'link',
     children: 'Link Button'
   },
-  parameters: {
-    backgrounds: {
-      default: 'dark'
-    }
-  },
+  parameters: darkModeParams,
   decorators: [withDarkMode]
 };
 

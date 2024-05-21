@@ -1,20 +1,19 @@
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from './';
 import { Canvas, Meta, Story } from '@storybook/blocks';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from './';
 import * as AccordionStories from './Accordion.stories';
+import { DarkModeContainer } from '../_internal/storybook-utils';
 
 # Accordion
+
+<Meta of={AccordionStories} />
 
 ### Single
 
 <Canvas of={AccordionStories.Default} />
 
-### Multiple
-
-<Canvas of={AccordionStories.Multiple} />
-
 ### Dark Mode
 
-<div className="dark" style={{ backgroundColor: '#333', padding: '24px 16px' }}>
+<DarkModeContainer>
   <Accordion type="single" collapsible className="w-full px-10 py-4">
     <AccordionItem value="item-1">
       <AccordionTrigger>Is it accessible?</AccordionTrigger>
@@ -31,4 +30,8 @@ import * as AccordionStories from './Accordion.stories';
       <AccordionContent>Yes. It's animated by default, but you can disable it if you prefer.</AccordionContent>
     </AccordionItem>
   </Accordion>
-</div>
+</DarkModeContainer>
+
+### Multiple
+
+<Canvas of={AccordionStories.Multiple} />
