@@ -1,6 +1,6 @@
 {
-  "name": "@gee/ui",
-  "version": "0.6.1",
+  "name": "@gee-ui/react",
+  "version": "0.6.3",
   "description": "Single source of truth react component library for all things shadcn/ui.",
   "type": "module",
   "main": "dist/index.cjs",
@@ -75,10 +75,6 @@
     "*.{js,ts,tsx,css,md}": "prettier --write --ignore-unknown",
     "*.{js,ts,tsx}": "eslint --fix"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/michael-gee/gee-ui.git"
-  },
   "keywords": [
     "shadcn",
     "react",
@@ -87,7 +83,9 @@
     "ui",
     "components"
   ],
-  "bugs": "https://github.com/michael-gee/gee-ui/issues",
+  "bugs": {
+    "url": "https://github.com/michael-gee/gee-ui/issues"
+  },
   "author": "Michael Gee",
   "license": "MIT"
 }

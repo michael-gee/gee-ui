@@ -1,4 +1,4 @@
-# @gee/ui
+# @gee-ui/react
 
 React (TypeScript) component library which serves as a wrapper library around [shadcn/ui](https://ui.shadcn.com/). Unlock the same ease of use and customization for all components but with a single source of truth library.
 
@@ -35,7 +35,7 @@ There are a lot of times where you have to install dependencies like [Radix](htt
 **After**
 
 ```
-"@gee/ui": "^1.0.0"
+"@gee-ui/react": "^1.0.0"
 ```
 
 ### 2. Duplication of the same work in multiple projects
@@ -50,7 +50,7 @@ A big inspiration for this library is the React 19 release [ref as a prop](https
 
 **After**
 
-`"@gee/ui": "^1.0.0""` -> `"@gee/ui": "^2.0.0"`
+`"@gee-ui/react": "^1.0.0""` -> `"@gee-ui/react": "^2.0.0"`
 
 ### 3. Additional opt-in functionality & features
 
