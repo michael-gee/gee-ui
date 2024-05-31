@@ -1,4 +1,4 @@
-name: gee-ui npm publish
+name: \@gee/ui npm publish
 
 on:
   push:
