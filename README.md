@@ -2,7 +2,7 @@
 
 React (TypeScript) component library which serves as a wrapper library around [shadcn/ui](https://ui.shadcn.com/). Unlock the same ease of use and customization for all components but with a single source of truth library.
 
-shadcn has been the go-to choice for a ton of React applications, after using it within multiple projects I came across 2 problems which this library aims to solve:
+shadcn has been the go-to choice for a ton of React applications, after using it within multiple projects I came across 3 problems which this library aims to solve:
 
 ### 1. Dependency management
 

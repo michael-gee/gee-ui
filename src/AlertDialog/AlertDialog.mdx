@@ -1,0 +1,17 @@
+import { Canvas, Meta, Story } from '@storybook/blocks';
+import * as AlertDialogStories from './AlertDialog.stories';
+import { DarkModeContainer } from '../_internal/storybook-utils';
+
+# Alert
+
+<Meta of={AlertDialogStories} />
+
+### Default
+
+<Canvas of={AlertDialogStories.Default} />
+
+### Dark Mode
+
+<DarkModeContainer className="flex h-52 w-full items-center justify-center">
+  <Story of={AlertDialogStories.DarkMode} />
+</DarkModeContainer>
