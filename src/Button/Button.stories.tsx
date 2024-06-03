@@ -1,21 +1,22 @@
 import { Button, ButtonSizes, ButtonVariants } from './';
 import { fn } from '@storybook/test';
 import { withDarkMode, darkModeParams } from '../_internal/storybook-utils';
-
 import type { Meta, StoryObj } from '@storybook/react';
 
-// More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
   title: 'Button',
   component: Button,
   parameters: {
-    // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
+    docs: {
+      description: {
+        component:
+          'Buttons are used to perform an action. They can be used in a variety of ways, such as to submit a form, to trigger a modal, or to navigate to another page.'
+      }
+    },
     layout: 'centered',
     backgrounds: { disable: true }
   },
-  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
-  // More on argTypes: https://storybook.js.org/docs/api/argtypes
   argTypes: {
     size: {
       type: 'string',
