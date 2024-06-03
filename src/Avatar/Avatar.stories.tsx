@@ -37,7 +37,7 @@ export const DarkMode = () => {
     </Avatar>
   );
 };
-
+DarkMode.storyName = 'Default (Dark)';
 DarkMode.parameters = { ...darkModeParams, layout: 'centered' };
 DarkMode.decorators = [withDarkMode];
 
@@ -58,6 +58,6 @@ export const DarkModeFallback = () => {
     </Avatar>
   );
 };
-
+DarkModeFallback.storyName = 'Fallback (Dark)';
 DarkModeFallback.parameters = darkModeParams;
 DarkModeFallback.decorators = [withDarkMode];

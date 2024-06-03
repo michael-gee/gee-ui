@@ -54,6 +54,7 @@ export const DestructiveDark = () => {
     </Alert>
   );
 };
+DestructiveDark.storyName = 'Destructive (Dark)';
 DestructiveDark.parameters = darkModeParams;
 DestructiveDark.decorators = [withDarkMode];
 
