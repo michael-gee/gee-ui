@@ -1,6 +1,5 @@
-import { Canvas, Meta, Story } from '@storybook/blocks';
+import { Canvas, Meta } from '@storybook/blocks';
 import * as BreadcrumbStories from './Breadcrumb.stories';
-import { DarkModeContainer } from '../_internal/storybook-utils';
 
 <Meta of={BreadcrumbStories} />
 
@@ -14,9 +13,7 @@ The breadcrumb component is used to indicate the current page’s location withi
 
 ### Dark Mode
 
-<DarkModeContainer className="flex w-full items-center justify-center">
-  <Story of={BreadcrumbStories.DarkMode} />
-</DarkModeContainer>
+<Canvas of={BreadcrumbStories.DarkMode} className="canvas-dark" />
 
 ### Custom Separator
 

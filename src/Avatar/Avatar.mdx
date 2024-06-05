@@ -1,6 +1,5 @@
-import { Canvas, Meta, Story } from '@storybook/blocks';
+import { Canvas, Meta } from '@storybook/blocks';
 import * as AvatarStories from './Avatar.stories';
-import { DarkModeContainer } from '../_internal/storybook-utils';
 
 <Meta of={AvatarStories} />
 
@@ -12,9 +11,7 @@ An image element with a fallback for representing the user.
 
 ### Dark Mode
 
-<DarkModeContainer className="mx-auto flex w-full justify-center">
-  <Story of={AvatarStories.DarkMode} />
-</DarkModeContainer>
+<Canvas of={AvatarStories.DarkMode} className="canvas-dark" />
 
 ### Fallback
 
@@ -22,6 +19,4 @@ An image element with a fallback for representing the user.
 
 ### Fallback (Dark)
 
-<DarkModeContainer className="mx-auto flex w-full justify-center">
-  <Story of={AvatarStories.DarkModeFallback} />
-</DarkModeContainer>
+<Canvas of={AvatarStories.DarkModeFallback} className="canvas-dark" />

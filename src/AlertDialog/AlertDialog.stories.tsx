@@ -9,6 +9,7 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger
 } from './';
+import { Button } from '../Button';
 import mdx from './AlertDialog.mdx';
 import { withDarkMode, darkModeParams } from '../_internal/storybook-utils';
 
@@ -39,7 +40,9 @@ export default meta;
 export const Default = () => {
   return (
     <AlertDialog>
-      <AlertDialogTrigger className="rounded-md bg-black px-6 py-2 text-white">Open Dialog</AlertDialogTrigger>
+      <AlertDialogTrigger asChild>
+        <Button variant="outline">Show Dialog</Button>
+      </AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>
           <AlertDialogTitle>Are you sure?</AlertDialogTitle>
@@ -57,7 +60,9 @@ export const Default = () => {
 export const DarkMode = () => {
   return (
     <AlertDialog>
-      <AlertDialogTrigger className="rounded-md bg-white px-6 py-2 text-black">Open Dialog</AlertDialogTrigger>
+      <AlertDialogTrigger asChild>
+        <Button variant="outline">Show Dialog</Button>
+      </AlertDialogTrigger>
       <AlertDialogContent className="dark">
         <AlertDialogHeader>
           <AlertDialogTitle>Are you sure?</AlertDialogTitle>

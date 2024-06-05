@@ -1,7 +1,7 @@
 import { Alert, AlertTitle, AlertDescription } from './';
-import mdx from './Alert.mdx';
-import { withDarkMode, darkModeParams } from '../_internal/storybook-utils';
 import { AlertCircle } from 'lucide-react';
+import { withDarkMode, darkModeParams } from '../_internal/storybook-utils';
+import mdx from './Alert.mdx';
 
 const meta = {
   title: 'Alert',

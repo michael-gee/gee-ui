@@ -1,6 +1,5 @@
-import { Canvas, Meta, Story } from '@storybook/blocks';
+import { Canvas, Meta } from '@storybook/blocks';
 import * as AlertStories from './Alert.stories';
-import { DarkModeContainer } from '../_internal/storybook-utils';
 
 <Meta of={AlertStories} />
 
@@ -14,9 +13,7 @@ Displays a callout for user attention.
 
 ### Dark Mode
 
-<DarkModeContainer>
-  <Story of={AlertStories.DarkMode} />
-</DarkModeContainer>
+<Canvas of={AlertStories.DarkMode} className="canvas-dark" />
 
 ### Destructive
 
@@ -24,9 +21,7 @@ Displays a callout for user attention.
 
 ### Destructive (Dark)
 
-<DarkModeContainer>
-  <Story of={AlertStories.DestructiveDark} />
-</DarkModeContainer>
+<Canvas of={AlertStories.DestructiveDark} className="canvas-dark" />
 
 ### With Icon
 

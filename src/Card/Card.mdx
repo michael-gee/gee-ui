@@ -1,0 +1,16 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as CardStories from './Card.stories';
+
+<Meta of={CardStories} />
+
+# Card
+
+A container for grouping related information.
+
+### Default
+
+<Canvas of={CardStories.Default} />
+
+### Dark Mode
+
+<Canvas of={CardStories.DarkMode} className="canvas-dark" />

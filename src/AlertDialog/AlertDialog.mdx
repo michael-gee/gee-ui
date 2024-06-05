@@ -1,6 +1,5 @@
-import { Canvas, Meta, Story } from '@storybook/blocks';
+import { Canvas, Meta } from '@storybook/blocks';
 import * as AlertDialogStories from './AlertDialog.stories';
-import { DarkModeContainer } from '../_internal/storybook-utils';
 
 <Meta of={AlertDialogStories} />
 
@@ -12,8 +11,6 @@ A modal dialog that interrupts the user with important content and expects a res
 
 <Canvas of={AlertDialogStories.Default} />
 
-### Dark Mode
-
-<DarkModeContainer className="flex h-52 w-full items-center justify-center">
-  <Story of={AlertDialogStories.DarkMode} />
-</DarkModeContainer>
+{/* ! TODO: fix Portal content dark mode */}
+{/* ### Dark Mode */}
+{/* <Canvas of={AlertDialogStories.DarkMode} className="canvas-dark" />{' '} */}
