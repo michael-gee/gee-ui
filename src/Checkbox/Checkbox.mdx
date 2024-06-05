@@ -1,0 +1,24 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as CheckboxStories from './Checkbox.stories';
+
+<Meta of={CheckboxStories} />
+
+# Checkbox
+
+A control that allows the user to toggle between checked and not checked.
+
+### Default
+
+<Canvas of={CheckboxStories.Default} />
+
+### Dark Mode
+
+<Canvas of={CheckboxStories.DarkMode} className="canvas-dark" />
+
+### Disabled
+
+<Canvas of={CheckboxStories.Disabled} />
+
+### Disabled (Dark)
+
+<Canvas of={CheckboxStories.DisabledDark} className="canvas-dark" />
