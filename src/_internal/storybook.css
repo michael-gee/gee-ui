@@ -1,3 +1,14 @@
 .canvas-dark {
   background: #000 !important;
 }
+
+.story-dark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 115px;
+  background: #000 !important;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 0;
+  border-radius: 4px;
+  margin-bottom: 40px !important;
+}

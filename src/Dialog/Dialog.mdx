@@ -1,0 +1,22 @@
+import { Canvas, Meta, Story } from '@storybook/blocks';
+import * as DialogStories from './Dialog.stories';
+
+<Meta of={DialogStories} />
+
+# Dialog
+
+A window overlaid on either the primary window or another dialog window, rendering the content underneath inert.
+
+### Default
+
+<Canvas of={DialogStories.Default} />
+
+### Dark Mode
+
+<div className="story-dark">
+  <Story of={DialogStories.DarkMode} />
+</div>
+
+### With Custom Close Button
+
+<Canvas of={DialogStories.WithCustomClose} />

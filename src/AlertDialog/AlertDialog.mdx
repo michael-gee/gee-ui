@@ -1,4 +1,4 @@
-import { Canvas, Meta } from '@storybook/blocks';
+import { Canvas, Meta, Story } from '@storybook/blocks';
 import * as AlertDialogStories from './AlertDialog.stories';
 
 <Meta of={AlertDialogStories} />
@@ -11,6 +11,8 @@ A modal dialog that interrupts the user with important content and expects a res
 
 <Canvas of={AlertDialogStories.Default} />
 
-{/* ! TODO: fix Portal content dark mode */}
-{/* ### Dark Mode */}
-{/* <Canvas of={AlertDialogStories.DarkMode} className="canvas-dark" />{' '} */}
+### Dark Mode
+
+<div className="story-dark">
+  <Story of={AlertDialogStories.DarkMode} />
+</div>
