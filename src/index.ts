@@ -9,6 +9,7 @@ export * from './Button';
 export * from './Card';
 export * from './Checkbox';
 export * from './Command';
+export * from './ContextMenu';
 export * from './Dialog';
 export * from './Input';
 
