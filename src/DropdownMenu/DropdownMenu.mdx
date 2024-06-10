@@ -1,0 +1,18 @@
+import { Canvas, Meta, Story } from '@storybook/blocks';
+import * as DropdownMenuStories from './DropdownMenu.stories';
+
+<Meta of={DropdownMenuStories} />
+
+# Dropdown Menu
+
+Displays a menu to the user — such as a set of actions or functions — triggered by a button.
+
+### Default
+
+<Canvas of={DropdownMenuStories.Default} />
+
+### Dark Mode
+
+<div className="story-dark">
+  <Story of={DropdownMenuStories.DarkMode} />
+</div>
