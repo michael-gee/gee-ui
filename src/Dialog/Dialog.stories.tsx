@@ -57,7 +57,9 @@ export const DarkMode = () => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline">Show Dialog</Button>
+        <Button variant="outline" className="font-bold">
+          Show Dialog
+        </Button>
       </DialogTrigger>
       <DialogContent className="dark">
         <DialogHeader>

@@ -61,7 +61,9 @@ export const DarkMode = () => {
   return (
     <AlertDialog>
       <AlertDialogTrigger asChild>
-        <Button variant="outline">Show Dialog</Button>
+        <Button variant="outline" className="font-bold">
+          Show Dialog
+        </Button>
       </AlertDialogTrigger>
       <AlertDialogContent className="dark">
         <AlertDialogHeader>
