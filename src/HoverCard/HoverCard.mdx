@@ -1,0 +1,18 @@
+import { Canvas, Meta, Story } from '@storybook/blocks';
+import * as HoverCardStories from './HoverCard.stories';
+
+<Meta of={HoverCardStories} />
+
+# Hover Card
+
+For sighted users to preview content available behind a link.
+
+### Default
+
+<Canvas of={HoverCardStories.Default} />
+
+### Dark Mode
+
+<div className="story-dark">
+  <Story of={HoverCardStories.DarkMode} />
+</div>
