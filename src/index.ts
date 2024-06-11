@@ -16,5 +16,6 @@ export * from './DropdownMenu';
 export * from './HoverCard';
 export * from './Input';
 export * from './InputOTP';
+export * from './Label';
 
 export * from './utils';

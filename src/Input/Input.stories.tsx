@@ -1,4 +1,5 @@
 import { Input } from './';
+import { Label } from '../Label';
 import { withDarkMode, darkModeParams } from '../_internal/storybook-utils';
 import type { Meta, StoryObj } from '@storybook/react';
 
@@ -104,10 +105,12 @@ export const DisabledDark: Story = {
   decorators: [withDarkMode]
 };
 
-export const Label: Story = {
-  name: 'Label (WIP)',
-  args: {
-    type: 'text',
-    placeholder: 'Relies on the <Label />'
-  }
+export const WithLabel = () => {
+  // import { Label } from '@gee-ui/react';
+  return (
+    <div className="grid w-full max-w-sm items-center gap-1.5">
+      <Label htmlFor="email">Email</Label>
+      <Input type="email" id="email" placeholder="Email" />
+    </div>
+  );
 };
