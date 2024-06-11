@@ -12,8 +12,7 @@ const meta = {
   },
   parameters: {
     docs: {
-      page: mdx,
-      iframeHeight: 1000
+      page: mdx
     },
     backgrounds: { disable: true },
     layout: 'centered'

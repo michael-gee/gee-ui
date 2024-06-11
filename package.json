@@ -39,6 +39,7 @@
     "clsx": "^2.1.1",
     "cmdk": "^1.0.0",
     "cva": "npm:class-variance-authority@^0.7.0",
+    "input-otp": "^1.2.4",
     "lucide-react": "^0.378.0",
     "tailwind-merge": "^2.3.0",
     "vaul": "^0.9.1"
