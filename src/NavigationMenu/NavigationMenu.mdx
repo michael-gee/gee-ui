@@ -1,0 +1,18 @@
+import { Canvas, Meta, Story } from '@storybook/blocks';
+import * as NavigationMenuStories from './NavigationMenu.stories';
+
+<Meta of={NavigationMenuStories} />
+
+# Navigation Menu
+
+A collection of links for navigating websites.
+
+### Default
+
+<Canvas of={NavigationMenuStories.Default} />
+
+### Dark Mode
+
+<div className="story-dark">
+  <Story of={NavigationMenuStories.DarkMode} />
+</div>

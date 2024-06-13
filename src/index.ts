@@ -18,5 +18,6 @@ export * from './Input';
 export * from './InputOTP';
 export * from './Label';
 export * from './Menubar';
+export * from './NavigationMenu';
 
 export * from './utils';
