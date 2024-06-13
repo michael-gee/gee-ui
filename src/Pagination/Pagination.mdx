@@ -1,0 +1,16 @@
+import { Canvas, Meta, Story } from '@storybook/blocks';
+import * as PaginationStories from './Pagination.stories';
+
+<Meta of={PaginationStories} />
+
+# Pagination
+
+Pagination with page navigation, next and previous links.
+
+### Default
+
+<Canvas of={PaginationStories.Default} />
+
+### Dark Mode
+
+<Canvas of={PaginationStories.DarkMode} className="canvas-dark" />
