@@ -17,5 +17,6 @@ export * from './HoverCard';
 export * from './Input';
 export * from './InputOTP';
 export * from './Label';
+export * from './Menubar';
 
 export * from './utils';

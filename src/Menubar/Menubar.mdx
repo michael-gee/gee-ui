@@ -1,0 +1,18 @@
+import { Canvas, Meta, Story } from '@storybook/blocks';
+import * as MenubarStories from './Menubar.stories';
+
+<Meta of={MenubarStories} />
+
+# Menubar
+
+A visually persistent menu common in desktop applications that provides quick access to a consistent set of commands.
+
+### Default
+
+<Canvas of={MenubarStories.Default} />
+
+### Dark Mode
+
+<div className="story-dark">
+  <Story of={MenubarStories.DarkMode} />
+</div>
