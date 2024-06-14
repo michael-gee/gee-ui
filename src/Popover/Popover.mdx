@@ -1,0 +1,18 @@
+import { Canvas, Meta, Story } from '@storybook/blocks';
+import * as PopoverStories from './Popover.stories';
+
+<Meta of={PopoverStories} />
+
+# Hover Card
+
+Displays rich content in a portal, triggered by a button.
+
+### Default
+
+<Canvas of={PopoverStories.Default} />
+
+### Dark Mode
+
+<div className="story-dark">
+  <Story of={PopoverStories.DarkMode} />
+</div>

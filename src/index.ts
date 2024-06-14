@@ -20,5 +20,6 @@ export * from './Label';
 export * from './Menubar';
 export * from './NavigationMenu';
 export * from './Pagination';
+export * from './Popover';
 
 export * from './utils';
