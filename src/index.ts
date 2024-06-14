@@ -22,5 +22,6 @@ export * from './NavigationMenu';
 export * from './Pagination';
 export * from './Popover';
 export * from './Progress';
+export * from './RadioGroup';
 
 export * from './utils';
