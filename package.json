@@ -1,6 +1,6 @@
 {
   "name": "@gee-ui/react",
-  "version": "0.13.0",
+  "version": "0.14.0",
   "description": "Single source of truth react component library for all things shadcn/ui.",
   "type": "module",
   "main": "dist/index.cjs",
@@ -47,6 +47,7 @@
     "cva": "npm:class-variance-authority@^0.7.0",
     "input-otp": "^1.2.4",
     "lucide-react": "^0.378.0",
+    "react-resizable-panels": "^2.0.19",
     "tailwind-merge": "^2.3.0",
     "vaul": "^0.9.1"
   },

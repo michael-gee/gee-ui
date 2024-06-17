@@ -1,0 +1,24 @@
+import { Canvas, Meta, Story } from '@storybook/blocks';
+import * as ResizableStories from './Resizable.stories';
+
+<Meta of={ResizableStories} />
+
+# Resizable
+
+Accessible resizable panel groups and layouts with keyboard support.
+
+### Default
+
+<Canvas of={ResizableStories.Default} />
+
+### Dark Mode
+
+<Canvas of={ResizableStories.DarkMode} className="canvas-dark" />
+
+### Vertical
+
+<Canvas of={ResizableStories.Vertical} />
+
+### With Handle
+
+<Canvas of={ResizableStories.WithHandle} />
