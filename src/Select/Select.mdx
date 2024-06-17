@@ -1,0 +1,22 @@
+import { Canvas, Meta, Story } from '@storybook/blocks';
+import * as SelectStories from './Select.stories';
+
+<Meta of={SelectStories} />
+
+# Select
+
+Displays a list of options for the user to pick from—triggered by a button.
+
+### Default
+
+<Canvas of={SelectStories.Default} />
+
+### Dark Mode
+
+<div className="story-dark">
+  <Story of={SelectStories.DarkMode} />
+</div>
+
+### Scrollable
+
+<Canvas of={SelectStories.Scrollable} />
