@@ -24,5 +24,6 @@ export * from './Popover';
 export * from './Progress';
 export * from './RadioGroup';
 export * from './Resizable';
+export * from './ScrollArea';
 
 export * from './utils';

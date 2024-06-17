@@ -1,0 +1,16 @@
+import { Canvas, Meta, Story } from '@storybook/blocks';
+import * as ScrollAreaStories from './ScrollArea.stories';
+
+<Meta of={ScrollAreaStories} />
+
+# ScrollArea
+
+Augments native scroll functionality for custom, cross-browser styling.
+
+### Default
+
+<Canvas of={ScrollAreaStories.Default} />
+
+### Dark Mode
+
+<Canvas of={ScrollAreaStories.DarkMode} className="canvas-dark" />
