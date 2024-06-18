@@ -1,0 +1,24 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as SkeletonStories from './Skeleton.stories';
+
+<Meta of={SkeletonStories} />
+
+# Skeleton
+
+Use to show a placeholder while content is loading.
+
+### Default
+
+<Canvas of={SkeletonStories.Default} />
+
+### Dark Mode
+
+<Canvas of={SkeletonStories.DarkMode} className="canvas-dark" />
+
+### Card
+
+<Canvas of={SkeletonStories.Card} />
+
+### Card (Dark)
+
+<Canvas of={SkeletonStories.DarkModeCard} className="canvas-dark" />
