@@ -1,0 +1,18 @@
+import { Canvas, Meta, Story } from '@storybook/blocks';
+import * as ToastStories from './Toast.stories';
+
+<Meta of={ToastStories} />
+
+# Toast
+
+An opinionated toast component for React.
+
+### Default
+
+<div className="mb-10 flex min-h-[115px] items-center justify-center rounded-sm py-6">
+  <Story of={ToastStories.Default} />
+</div>
+
+### Dark Mode
+
+The `<Toaster />` component is only meant to be used once at the root of your application. To view the dark mode example, navigate to the "Dark Mode" item in the navigation menu.
