@@ -27,5 +27,6 @@ export * from './Resizable';
 export * from './ScrollArea';
 export * from './Select';
 export * from './Skeleton';
+export * from './Slider';
 
 export * from './utils';
