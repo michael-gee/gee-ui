@@ -1,0 +1,16 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as TabsStories from './Tabs.stories';
+
+<Meta of={TabsStories} />
+
+# Tabs
+
+A set of layered sections of content—known as tab panels—that are displayed one at a time.
+
+### Default
+
+<Canvas of={TabsStories.Default} />
+
+### Dark Mode
+
+<Canvas of={TabsStories.DarkMode} className="canvas-dark" />
