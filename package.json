@@ -1,20 +1,30 @@
 {
   "name": "@gee-ui/react",
-  "version": "0.15.0",
+  "version": "0.16.0",
   "description": "Single source of truth react component library for all things shadcn/ui.",
   "type": "module",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
+  "sideEffects": false,
   "exports": {
     ".": {
       "import": "./dist/index.js",
       "require": "./dist/index.cjs",
       "types": "./dist/index.d.ts"
+    },
+    "./utils": {
+      "import": "./dist/utils.js",
+      "require": "./dist/utils.cjs",
+      "types": "./dist/utils.d.ts"
+    },
+    "./tailwind-preset": {
+      "require": "./dist/tailwind-preset.cjs",
+      "types": "./dist/tailwind-preset.d.ts"
     }
   },
   "scripts": {
-    "build": "tsup",
+    "build": "export NODE_OPTIONS=--max-old-space-size=8192 && tsup --external pkgJson",
     "deps:check": "npx npm-check-updates",
     "deps:upgrade": "npx npm-check-updates -u && npm i",
     "dev": "storybook dev -p 6006",
@@ -55,13 +65,12 @@
     "react-resizable-panels": "^2.0.19",
     "sonner": "^1.5.0",
     "tailwind-merge": "^2.3.0",
+    "tailwindcss-animate": "^1.0.7",
     "vaul": "^0.9.1"
   },
   "peerDependencies": {
     "react": "18.x",
-    "react-dom": "18.x",
-    "tailwindcss": "3.x",
-    "tailwindcss-animate": "1.x"
+    "react-dom": "18.x"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.5.0",
@@ -91,7 +100,6 @@
     "react-dom": "^18.3.1",
     "storybook": "^8.1.5",
     "tailwindcss": "^3.4.3",
-    "tailwindcss-animate": "^1.0.7",
     "tsup": "^8.0.2",
     "typescript": "^5.3.3"
   },
