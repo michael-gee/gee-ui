@@ -1,6 +1,6 @@
 {
   "name": "@gee-ui/react",
-  "version": "0.16.0",
+  "version": "0.17.0",
   "description": "Single source of truth react component library for all things shadcn/ui.",
   "type": "module",
   "main": "dist/index.cjs",
@@ -57,6 +57,7 @@
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-switch": "^1.0.3",
     "@radix-ui/react-tabs": "^1.0.4",
+    "@radix-ui/react-toggle": "^1.1.0",
     "clsx": "^2.1.1",
     "cmdk": "^1.0.0",
     "cva": "npm:class-variance-authority@^0.7.0",

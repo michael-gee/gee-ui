@@ -32,3 +32,4 @@ export * from './Switch';
 export * from './Tabs';
 export * from './Textarea';
 export * from './Toast';
+export * from './Toggle';

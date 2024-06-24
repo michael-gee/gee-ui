@@ -1,4 +1,4 @@
-// eslint-disable-next-line no-undef
+/* eslint-disable no-undef */
 module.exports = {
   theme: {
     container: {
@@ -70,6 +70,5 @@ module.exports = {
       }
     }
   },
-  // eslint-disable-next-line no-undef
   plugins: [require('tailwindcss-animate')]
 };
