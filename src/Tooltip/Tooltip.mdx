@@ -1,0 +1,16 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as TooltipStories from './Tooltip.stories';
+
+<Meta of={TooltipStories} />
+
+# Tooltip
+
+A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.
+
+### Default
+
+<Canvas of={TooltipStories.Default} />
+
+### Dark Mode
+
+<Canvas of={TooltipStories.DarkMode} className="canvas-dark" />
