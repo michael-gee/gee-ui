@@ -1,0 +1,20 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as CollapsibleStories from './Collapsible.stories';
+
+<Meta of={CollapsibleStories} />
+
+# Collapsible
+
+The Collapsible component is used to indicate the current page’s location within a navigational hierarchy.
+
+### Default
+
+<Canvas of={CollapsibleStories.Default} />
+
+### Dark Mode
+
+<Canvas of={CollapsibleStories.DarkMode} className="canvas-dark" />
+
+### Simple (Unstyled)
+
+<Canvas of={CollapsibleStories.Simple} />
