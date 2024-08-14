@@ -1,11 +1,14 @@
 import { Canvas, Meta } from '@storybook/blocks';
 import * as AvatarStories from './Avatar.stories';
+import { RadixDocs } from '../_internal/RadixDocs';
 
 <Meta of={AvatarStories} />
 
 # Avatar
 
-An image element with a fallback for representing the user.
+<p className="italic">An image element with a fallback for representing the user.</p>
+
+<RadixDocs componentName="avatar" />
 
 <Canvas of={AvatarStories.Default} />
 
