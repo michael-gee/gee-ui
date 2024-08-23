@@ -47,8 +47,7 @@ There are a lot of times where you have to install dependencies like [Radix](htt
 "react-resizable-panels": "^2.0.20",
 "sonner": "^1.5.0",
 "tailwind-merge": "^2.4.0",
-"tailwindcss-animate": "^1.0.7",
-"vaul": "^0.9.1"
+"tailwindcss-animate": "^1.0.7"
 ... that's 38 dependencies and counting! hopefully you get my point
 
 ```
