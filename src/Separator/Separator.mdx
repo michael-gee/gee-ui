@@ -1,0 +1,19 @@
+import { Canvas, Meta, Story } from '@storybook/blocks';
+import * as SeparatorStories from './Separator.stories';
+import { RadixDocs } from '../_internal/RadixDocs';
+
+<Meta of={SeparatorStories} />
+
+# Separator
+
+<p className="italic">Visually or semantically separates content.</p>
+
+<RadixDocs componentName="separator" />
+
+### Default
+
+<Canvas of={SeparatorStories.Default} />
+
+### Dark Mode
+
+<Canvas of={SeparatorStories.DarkMode} className="canvas-dark" />
