@@ -1,6 +1,6 @@
 {
   "name": "@gee-ui/react",
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0-beta.3",
   "description": "Single source of truth react component library for all things shadcn/ui.",
   "type": "module",
   "main": "dist/index.cjs",
@@ -73,8 +73,7 @@
     "react-resizable-panels": "^2.0.20",
     "sonner": "^1.5.0",
     "tailwind-merge": "^2.5.2",
-    "tailwindcss-animate": "^1.0.7",
-    "vaul": "^0.9.1"
+    "tailwindcss-animate": "^1.0.7"
   },
   "peerDependencies": {
     "react": "18.x",
