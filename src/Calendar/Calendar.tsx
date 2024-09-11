@@ -45,7 +45,7 @@ function Calendar({ className, classNames, showOutsideDays = true, ...props }: C
         ),
         range_end: cn('range-end', classNames?.range_end),
         selected: cn(
-          'bg-[#2055DA] [&>button]:text-white hover:bg-[#2055DA] focus:[&>button]:bg-[#2055DA] focus:[&>button]:text-white',
+          '[&>button]:bg-[#2055DA] [&>button]:text-white focus:[&>button]:bg-[#2055DA] focus:[&>button]:text-white',
           classNames?.selected
         ),
         today: cn('bg-accent text-accent-foreground', classNames?.today),
