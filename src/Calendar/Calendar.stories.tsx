@@ -1,20 +1,19 @@
 import { Calendar } from './';
+import { useState } from 'react';
 import { withDarkMode, darkModeParams } from '../_internal/storybook-utils';
-import type { Meta, StoryObj } from '@storybook/react';
+import mdx from './Calendar.mdx';
+import type { Meta } from '@storybook/react';
 
 const meta = {
   title: 'Calendar',
   component: Calendar,
   parameters: {
     docs: {
-      description: {
-        component: 'A date field component that allows users to enter and edit date.'
-      }
+      page: mdx
     },
     layout: 'centered',
     backgrounds: { disable: true }
   },
-  tags: ['autodocs'],
   argTypes: {},
 
   args: {}
@@ -22,19 +21,14 @@ const meta = {
 
 export default meta;
 
-type Story = StoryObj<typeof meta>;
-
-export const Primary: Story = {
-  args: {
-    className: 'rounded-md border'
-  }
+export const Default = () => {
+  const [date, setDate] = useState<Date | undefined>(new Date());
+  return <Calendar mode="single" selected={date} onSelect={setDate} className="rounded-md border" />;
 };
 
-export const PrimaryDark: Story = {
-  name: 'Primary (Dark)',
-  args: {
-    className: 'rounded-md border'
-  },
-  parameters: darkModeParams,
-  decorators: [withDarkMode]
+export const DarkMode = () => {
+  const [date, setDate] = useState<Date | undefined>(new Date());
+  return <Calendar mode="single" selected={date} onSelect={setDate} className="rounded-md border" />;
 };
+DarkMode.parameters = darkModeParams;
+DarkMode.decorators = [withDarkMode];
