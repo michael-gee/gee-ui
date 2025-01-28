@@ -1,5 +1,10 @@
 # @gee-ui/react
 
+> ⚠️ This library is now depreacted.
+>
+> A lot of what this library set out to achieve will be solved by the new component library [Base UI](https://github.com/mui/base-ui).
+> Instead of revinventing the wheel I plan on using that and hopefully contributing to it
+
 React (TypeScript) component library which serves as a wrapper library around [shadcn/ui](https://ui.shadcn.com/). Unlock the same ease of use and customization for all components but with a single source of truth library.
 
 shadcn has been the go-to choice for a ton of React applications, after using it within multiple projects I came across 3 problems which this library aims to solve:
