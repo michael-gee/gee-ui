@@ -27,7 +27,7 @@ export const Default = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <Collapsible open={isOpen} onOpenChange={setIsOpen} className="w-[350px] space-y-2 text-foreground">
+    <Collapsible open={isOpen} onOpenChange={setIsOpen} className="w-[350px] space-y-2 text-[var(--foreground)]">
       <div className="flex items-center justify-between space-x-4 px-4">
         <h4 className="text-sm font-semibold">@peduarte starred 3 repositories</h4>
         <CollapsibleTrigger asChild>
@@ -50,7 +50,7 @@ export const DarkMode = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <Collapsible open={isOpen} onOpenChange={setIsOpen} className="w-[350px] space-y-2 text-foreground">
+    <Collapsible open={isOpen} onOpenChange={setIsOpen} className="w-[350px] space-y-2 text-[var(--foreground)]">
       <div className="flex items-center justify-between space-x-4 px-4">
         <h4 className="text-sm font-semibold">@peduarte starred 3 repositories</h4>
         <CollapsibleTrigger asChild>

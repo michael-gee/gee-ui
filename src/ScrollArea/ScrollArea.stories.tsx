@@ -24,8 +24,8 @@ const tags = Array.from({ length: 50 }).map((_, i, a) => `v1.2.0-beta.${a.length
 export const Default = () => {
   return (
     <ScrollArea className="h-72 w-48 rounded-md border">
-      <div className="p-4 text-foreground">
-        <h4 className="mb-4 text-sm font-medium leading-none">Tags</h4>
+      <div className="p-4 text-[var(--foreground)]">
+        <h4 className="mb-4 text-sm leading-none font-medium">Tags</h4>
         {tags.map(tag => (
           <>
             <div key={tag} className="text-sm">
@@ -43,8 +43,8 @@ export const Default = () => {
 export const DarkMode = () => {
   return (
     <ScrollArea className="h-72 w-48 rounded-md border">
-      <div className="p-4 text-foreground">
-        <h4 className="mb-4 text-sm font-medium leading-none">Tags</h4>
+      <div className="p-4 text-[var(--foreground)]">
+        <h4 className="mb-4 text-sm leading-none font-medium">Tags</h4>
         {tags.map(tag => (
           <>
             <div key={tag} className="text-sm">

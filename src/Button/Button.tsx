@@ -4,16 +4,18 @@ import { cva, type VariantProps } from 'cva';
 import { cn } from '../utils';
 
 const buttonVariants = cva(
-  'inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium text-foreground transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50',
+  'inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium text-[var(--foreground)] transition-colors focus-visible:outline-hidden focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50',
   {
     variants: {
       variant: {
-        default: 'bg-primary text-primary-foreground shadow hover:bg-primary/90',
-        destructive: 'bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90',
-        outline: 'border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground',
-        secondary: 'bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80',
-        ghost: 'hover:bg-accent hover:text-accent-foreground',
-        link: 'text-primary underline-offset-4 hover:underline'
+        default: 'bg-[var(--primary)] text-[var(--primary)]-[var(--foreground)] shadow-sm hover:bg-[var(--primary)]/90',
+        destructive:
+          'bg-[var(--destructive)] text-[var(--destructive-foreground)] shadow-xs hover:bg-[var(--destructive)]/90',
+        outline:
+          'border border-[var(--input)] bg-[var(--background)] shadow-xs hover:bg-[var(--accent)] hover:text-[var(--accent-foreground)]',
+        secondary: 'bg-[var(--secondary)] text-[var(--secondary-foreground)] shadow-xs hover:bg-[var(--secondary)]/80',
+        ghost: 'hover:bg-[var(--accent)] hover:text-[var(--accent-foreground)]',
+        link: 'text-[var(--primary)] underline-offset-4 hover:underline'
       },
       size: {
         default: 'h-9 px-4 py-2',

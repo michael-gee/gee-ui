@@ -17,33 +17,6 @@ Similar to [shadcn/ui](https://ui.shadcn.com/), this library is built on top of 
 npm install @gee-ui/react
 ```
 
-## Add Tailwind Configuration
-
-[Tailwindcss Configuration](https://tailwindcss.com/docs/configuration)
-
-Add the following to your `tailwind.config.(js/ts)` file:
-
-```js
-
-import type { Config } from 'tailwindcss';
-
-const config: Config = {
-  // ...
-
-  // Required additions:
-  content: [(keep what already existed here) ..., './node_modules/@gee-ui/react/dist/**/*.{js,cjs}'],
-  presets: [require('@gee-ui/react/tailwind-preset')],
-
-  // Optional additions (dark mode support):
-  darkMode: ['selector'], // (Use 'class' strategy if Tailwind CSS version is not yet v3.4.1 or higher)
-
-  // ...
-
-};
-
-export default config;
-```
-
 ## Add global styles
 
 The following styles are the default values used within [shadcn/ui](https://ui.shadcn.com/docs/theming). You can override these styles to match your project's design system and if you don't want to override the default styles, you can just as easily override any styles at the component level.
@@ -51,12 +24,9 @@ The following styles are the default values used within [shadcn/ui](https://ui.s
 Add the following to your `index.css` or `global.css` file:
 
 ```css
-/* tailwindcss styles (these should already be here) */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@custom-variant dark (&:where(.dark, .dark *));
 
-/* gee-ui global styles */
 @layer base {
   :root {
     --background: hsl(0 0% 100%);
@@ -120,19 +90,9 @@ Add the following to your `index.css` or `global.css` file:
     --radius: 0.5rem;
   }
 }
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-    font-feature-settings:
-      'rlig' 1,
-      'calt' 1;
-  }
-}
 ```
+
+⚠️ `@import 'tailwindcss';` and global styles should be at the root of your project and used only once.
 
 ## Usage
 

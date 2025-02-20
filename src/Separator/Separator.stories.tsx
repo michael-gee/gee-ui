@@ -18,10 +18,10 @@ export default meta;
 
 export const Default = () => {
   return (
-    <div className="text-foreground">
+    <div className="text-[var(--foreground)]">
       <div className="space-y-1">
-        <h4 className="text-sm font-medium leading-none">Radix Primitives</h4>
-        <p className="text-sm text-muted-foreground">An open-source UI component library.</p>
+        <h4 className="text-sm leading-none font-medium">Radix Primitives</h4>
+        <p className="text-sm text-[var(--muted-foreground)]">An open-source UI component library.</p>
       </div>
       <Separator className="my-4" />
       <div className="flex h-5 items-center space-x-4 text-sm">
@@ -37,10 +37,10 @@ export const Default = () => {
 
 export const DarkMode = () => {
   return (
-    <div className="text-foreground">
+    <div className="text-[var(--foreground)]">
       <div className="space-y-1">
-        <h4 className="text-sm font-medium leading-none">Radix Primitives</h4>
-        <p className="text-sm text-muted-foreground">An open-source UI component library.</p>
+        <h4 className="text-sm leading-none font-medium">Radix Primitives</h4>
+        <p className="text-sm text-[var(--muted-foreground)]">An open-source UI component library.</p>
       </div>
       <Separator className="my-4" />
       <div className="flex h-5 items-center space-x-4 text-sm">

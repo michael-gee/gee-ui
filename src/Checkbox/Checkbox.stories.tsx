@@ -21,11 +21,11 @@ export const Default = () => {
       <div className="grid gap-1.5 leading-none">
         <label
           htmlFor="terms1"
-          className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+          className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
         >
           Accept terms and conditions
         </label>
-        <p className="text-sm text-muted-foreground">You agree to our Terms of Service and Privacy Policy.</p>
+        <p className="text-sm text-[var(--muted-foreground)]">You agree to our Terms of Service and Privacy Policy.</p>
       </div>
     </div>
   );
@@ -38,11 +38,11 @@ export const DarkMode = () => {
       <div className="grid gap-1.5 leading-none">
         <label
           htmlFor="terms2"
-          className="text-sm font-medium leading-none text-foreground peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+          className="text-sm leading-none font-medium text-[var(--foreground)] peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
         >
           Accept terms and conditions
         </label>
-        <p className="text-sm text-muted-foreground">You agree to our Terms of Service and Privacy Policy.</p>
+        <p className="text-sm text-[var(--muted-foreground)]">You agree to our Terms of Service and Privacy Policy.</p>
       </div>
     </div>
   );
@@ -56,7 +56,7 @@ export const Disabled = () => {
       <Checkbox id="terms3" disabled />
       <label
         htmlFor="terms3"
-        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+        className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
       >
         Accept terms and conditions
       </label>
@@ -70,7 +70,7 @@ export const DisabledDark = () => {
       <Checkbox id="terms4" disabled />
       <label
         htmlFor="terms4"
-        className="text-sm font-medium leading-none text-foreground peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+        className="text-sm leading-none font-medium text-[var(--foreground)] peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
       >
         Accept terms and conditions
       </label>

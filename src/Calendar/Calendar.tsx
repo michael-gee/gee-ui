@@ -16,7 +16,7 @@ function Calendar({ className, classNames, showOutsideDays = true, ...props }: C
       className={cn('relative p-3', className)}
       classNames={{
         months: cn('flex flex-col sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0', classNames?.months),
-        month: cn('space-y-4 !ml-0', classNames?.month),
+        month: cn('space-y-4 ml-0!', classNames?.month),
         month_caption: cn('flex justify-center pt-1 relative items-center', classNames?.month_caption),
         caption_label: cn('text-sm font-medium', classNames?.caption_label),
         nav: cn('space-x-1 flex items-center', classNames?.nav),
@@ -32,10 +32,10 @@ function Calendar({ className, classNames, showOutsideDays = true, ...props }: C
         ),
         month_grid: cn('w-full border-collapse space-y-1', classNames?.month_grid),
         weekdays: cn('flex', classNames?.weekdays),
-        weekday: cn('text-muted-foreground rounded-md w-9 font-normal text-[0.8rem]', classNames?.weekday),
+        weekday: cn('text-[var(--muted-foreground)] rounded-md w-9 font-normal text-[0.8rem]', classNames?.weekday),
         week: cn('flex w-full mt-2', classNames?.week),
         day: cn(
-          'h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].range_end)]:rounded-r-md [&:has([aria-selected].outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20',
+          'h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].range_end)]:rounded-r-md [&:has([aria-selected].outside)]:bg-[var(--accent)]/50 [&:has([aria-selected])]:bg-[var(--accent)] first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20',
           classNames?.day
         ),
         day_button: cn(
@@ -45,16 +45,19 @@ function Calendar({ className, classNames, showOutsideDays = true, ...props }: C
         ),
         range_end: cn('range-end', classNames?.range_end),
         selected: cn(
-          '[&>button]:bg-[#2055DA] [&>button]:text-white focus:[&>button]:bg-[#2055DA] focus:[&>button]:text-white',
+          '[&>button]:bg-[#2055DA] [&>button]:text-white [&>button]:focus:bg-[#2055DA] [&>button]:focus:text-white',
           classNames?.selected
         ),
-        today: cn('bg-accent text-accent-foreground', classNames?.today),
+        today: cn('bg-[var(--accent)] text-[var(--accent-foreground)]', classNames?.today),
         outside: cn(
-          'day-outside text-muted-foreground opacity-50 aria-selected:bg-accent/50 aria-selected:text-muted-foreground aria-selected:opacity-30',
+          'day-outside text-[var(--muted-foreground)] opacity-50 aria-selected:bg-[var(--accent)]/50 aria-selected:text-[var(--muted-foreground)] aria-selected:opacity-30',
           classNames?.outside
         ),
-        disabled: cn('text-muted-foreground opacity-50', classNames?.disabled),
-        range_middle: cn('aria-selected:bg-accent aria-selected:text-accent-foreground', classNames?.range_middle),
+        disabled: cn('text-[var(--muted-foreground)] opacity-50', classNames?.disabled),
+        range_middle: cn(
+          'aria-selected:bg-[var(--accent)] aria-selected:text-[var(--accent-foreground)]',
+          classNames?.range_middle
+        ),
         hidden: cn('invisible', classNames?.hidden),
         ...classNames
       }}

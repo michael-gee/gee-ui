@@ -1,6 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@custom-variant dark (&:where(.dark, .dark *));
 
 @layer base {
   :root {
@@ -63,17 +62,5 @@
     --input: hsl(240 3.7% 15.9%);
     --ring: hsl(240 4.9% 83.9%);
     --radius: 0.5rem;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-    font-feature-settings:
-      'rlig' 1,
-      'calt' 1;
   }
 }
