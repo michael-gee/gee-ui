@@ -1,8 +1,8 @@
 # @gee-ui/react
 
-> ⚠️ Deveopment of this project is temporarily on hold until [Base UI](https://github.com/mui/base-ui) reaches beta or v1.
-> 
-> The future plan of this project will be to combine the primitives from both Base UI (Radix for components not supported) and ShadCN/Tailwind/v0 for styling.
+> ⚠️ Deveopment of this project will remain in beta until [Base UI](https://github.com/mui/base-ui) reaches v1.
+>
+> The plan of this project will be to combine the primitives from both Base UI (Radix for components not supported) and ShadCN/Tailwind/v0 for styling.
 
 React (TypeScript) component library which serves as a wrapper library around [shadcn/ui](https://ui.shadcn.com/). Unlock the same ease of use and customization for all components but with a single source of truth library.
 
