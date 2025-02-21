@@ -29,8 +29,8 @@ export const Default = () => {
 export const DarkMode = () => {
   return (
     <div className="flex items-center space-x-2">
-      <Switch id="airplane-mode" />
-      <Label htmlFor="airplane-mode">Airplane Mode</Label>
+      <Switch id="airplane-mode-dark" />
+      <Label htmlFor="airplane-mode-dark">Airplane Mode</Label>
     </div>
   );
 };

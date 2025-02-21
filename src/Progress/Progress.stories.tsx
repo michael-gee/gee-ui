@@ -40,7 +40,7 @@ export const Primary: Story = {
 
 export const DarkMode: Story = {
   args: {
-    value: 33
+    value: 50
   }
 };
 DarkMode.parameters = darkModeParams;

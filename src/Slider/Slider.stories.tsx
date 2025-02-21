@@ -66,7 +66,7 @@ export const Default: Story = {
 export const DarkMode: Story = {
   args: {
     step: 1,
-    defaultValue: [33],
+    defaultValue: [50],
     max: 100
   }
 };

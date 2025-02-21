@@ -13,12 +13,12 @@ function Calendar({ className, classNames, showOutsideDays = true, ...props }: C
   return (
     <DayPicker
       showOutsideDays={showOutsideDays}
-      className={cn('relative p-3', className)}
+      className={cn('relative border-[var(--muted-foreground)] p-3', className)}
       classNames={{
         months: cn('flex flex-col sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0', classNames?.months),
         month: cn('space-y-4 ml-0!', classNames?.month),
         month_caption: cn('flex justify-center pt-1 relative items-center', classNames?.month_caption),
-        caption_label: cn('text-sm font-medium', classNames?.caption_label),
+        caption_label: cn('text-sm font-medium text-[var(--foreground)]', classNames?.caption_label),
         nav: cn('space-x-1 flex items-center', classNames?.nav),
         button_previous: cn(
           buttonVariants({ variant: 'outline' }),
