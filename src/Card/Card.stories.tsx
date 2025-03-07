@@ -29,7 +29,7 @@ export const Default = () => {
           <BellRing />
           <div className="flex-1 space-y-1">
             <p className="text-sm leading-none font-medium">Push Notifications</p>
-            <p className="text-sm text-[var(--muted-foreground)]">Send notifications to device.</p>
+            <p className="text-muted-foreground text-sm">Send notifications to device.</p>
           </div>
         </div>
       </CardContent>

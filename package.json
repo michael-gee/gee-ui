@@ -1,6 +1,6 @@
 {
   "name": "@gee-ui/react",
-  "version": "1.0.0-beta.8",
+  "version": "1.0.0-beta.9",
   "description": "Single source of truth react component library for all things base-ui & shadcn/ui.",
   "type": "module",
   "main": "dist/index.cjs",

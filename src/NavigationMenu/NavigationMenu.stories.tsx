@@ -45,13 +45,13 @@ const ListItem = forwardRef<React.ElementRef<'a'>, React.ComponentPropsWithoutRe
           <a
             ref={ref}
             className={cn(
-              'block space-y-1 rounded-md p-3 leading-none no-underline outline-hidden transition-colors select-none hover:bg-[var(--accent)] hover:text-[var(--accent-foreground)] focus:bg-[var(--accent)] focus:text-[var(--accent-foreground)]',
+              'hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground block space-y-1 rounded-md p-3 leading-none no-underline outline-hidden transition-colors select-none',
               className
             )}
             {...props}
           >
             <div className="text-sm leading-none font-medium">{title}</div>
-            <p className="line-clamp-2 text-sm leading-snug text-[var(--muted-foreground)]">{children}</p>
+            <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">{children}</p>
           </a>
         </NavigationMenuLink>
       </li>
@@ -106,12 +106,12 @@ export const Default = () => {
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <a
-                    className="flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b from-[var(--muted)]/50 to-[var(--muted)] p-6 no-underline outline-hidden select-none focus:shadow-md"
+                    className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-hidden select-none focus:shadow-md"
                     href="/"
                   >
                     {/* <Icons.logo className="h-6 w-6" /> */}
                     <div className="mt-4 mb-2 text-lg font-medium">shadcn/ui</div>
-                    <p className="text-sm leading-tight text-[var(--muted-foreground)]">
+                    <p className="text-muted-foreground text-sm leading-tight">
                       Beautifully designed components that you can copy and paste into your apps. Accessible.
                       Customizable. Open Source.
                     </p>
@@ -162,12 +162,12 @@ export const DarkMode = () => {
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <a
-                    className="flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b from-[var(--muted)]/50 to-[var(--muted)] p-6 no-underline outline-hidden select-none focus:shadow-md"
+                    className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-hidden select-none focus:shadow-md"
                     href="/"
                   >
                     {/* <Icons.logo className="h-6 w-6" /> */}
                     <div className="mt-4 mb-2 text-lg font-medium">shadcn/ui</div>
-                    <p className="text-sm leading-tight text-[var(--muted-foreground)]">
+                    <p className="text-muted-foreground text-sm leading-tight">
                       Beautifully designed components that you can copy and paste into your apps. Accessible.
                       Customizable. Open Source.
                     </p>
