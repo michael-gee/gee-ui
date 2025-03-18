@@ -11,13 +11,13 @@ Similar to [shadcn/ui](https://ui.shadcn.com/), this library is built on top of 
 - [React Installation Guide](https://react.dev/learn/installation)
 - [Tailwindcss Installation Guide](https://tailwindcss.com/docs/installation)
 
-## Install the package into your project
+### Install the package into your project
 
 ```bash
 npm install @gee-ui/react
 ```
 
-## If you plan to use `<Form />` or related components, install react-hook-form into your project:
+### If you plan to use `<Form />` or related components, install react-hook-form into your project:
 
 ```bash
 npm install react-hook-form
@@ -131,6 +131,29 @@ Add the following to your `index.css` or `global.css` file:
 ```
 
 ⚠️ `@import 'tailwindcss';` and global styles should be at the root of your project and used only once.
+
+## Add tailwind config
+
+```ts
+// tailwind.config.ts or tailwind.config.js
+module.exports = {
+  content: ['./src/**/*.{js,ts,jsx,tsx}', './node_modules/@gee-ui/react/dist/**/*.js']
+};
+```
+
+```css
+/* index.css or global.css */
+@import 'tailwindcss';
+@custom-variant dark (&:where(.dark, .dark *));
+/* Add one of the 2 lines to the existing css file we modified above (wherever your tailwindcss import is) */
+/* JavaScript file */
+@config "path/to/tailwind.config.js";
+
+/* OR */
+
+/* TypeScript file */
+@config "path/to/tailwind.config.ts";
+```
 
 ## Usage
 
