@@ -1,6 +1,6 @@
 {
   "name": "@gee-ui/react",
-  "version": "1.0.0-beta.11",
+  "version": "1.0.0-beta.12",
   "description": "Single source of truth react component library for all things base-ui & shadcn/ui.",
   "type": "module",
   "main": "dist/index.cjs",
@@ -73,6 +73,11 @@
     "react-dom": "^17 || ^18 || ^19",
     "react-hook-form": "^7",
     "tailwindcss": "^4"
+  },
+  "peerDependenciesMeta": {
+    "react-hook-form": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.7.0",
