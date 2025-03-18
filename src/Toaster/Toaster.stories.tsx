@@ -1,6 +1,6 @@
-import { Toaster, toast } from './';
+import { Toaster, toast } from '.';
 import { Button } from '../Button';
-import mdx from './Toast.mdx';
+import mdx from './Toaster.mdx';
 import { withDarkMode, darkModeParams } from '../_internal/storybook-utils';
 
 const meta = {

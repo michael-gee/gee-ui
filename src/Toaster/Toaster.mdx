@@ -1,0 +1,64 @@
+import { Canvas, Meta, Story } from '@storybook/blocks';
+import * as ToasterStories from './Toaster.stories';
+
+<Meta of={ToasterStories} />
+
+# Toaster
+
+<p className="italic">An opinionated toast component for React.</p>
+
+This component is a wrapper around the `sonner` library. It provides a simple API for creating toasts in your application.
+
+<a href={`https://sonner.emilkowal.ski/`} target="_blank">
+  <span>Documentation</span>
+</a>
+
+<br />
+<br />
+
+### Default
+
+<div className="mb-10 flex min-h-[115px] items-center justify-center rounded-sm py-6">
+  <Story of={ToasterStories.Default} />
+</div>
+
+The `<Toaster />` component is only meant to be used once at the root of your application. To view the dark mode example, navigate to the "Dark Mode" item in the navigation menu.
+
+Example Usage:
+
+```jsx
+// Root of your application:
+import { Toaster } from '@gee-ui/react';
+import { App } from './App';
+
+function Root() {
+  const theme = 'system'; // 'light' | 'dark' | 'system'
+
+  return (
+    <Toaster theme={theme}>
+      <App />
+    </Toaster>
+  );
+}
+```
+
+```jsx
+// toast is now accessible globally
+import { Button } from '@gee-ui/react';
+import { toast } from '@gee-ui/react';
+
+<Button
+  variant="outline"
+  onClick={() =>
+    toast('Event has been created', {
+      description: 'Sunday, December 03, 2023 at 9:00 AM',
+      action: {
+        label: 'Undo',
+        onClick: () => console.log('Undo')
+      }
+    })
+  }
+>
+  Show Toast
+</Button>;
+```
