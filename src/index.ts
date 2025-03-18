@@ -16,6 +16,7 @@ export * from './ContextMenu';
 export * from './Dialog';
 export * from './Drawer';
 export * from './DropdownMenu';
+export * from './Form';
 export * from './HoverCard';
 export * from './Input';
 export * from './InputOTP';

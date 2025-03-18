@@ -1,0 +1,125 @@
+# Form
+
+The `<Form />` component is a wrapper around the `react-hook-form` library. It provides a few things:
+
+- Composable components for building forms.
+- A `<FormField />` component for building controlled form fields.
+- Handles form state and validation with any schema library react-hook-form supports. The recommendation is to use `zod` but you can use anything you want.
+- Handles accessibility and error message rendering.
+- Uses React.useId() for generating unique IDs.
+- Applies the correct aria attributes to form fields based on states.
+- You have full control over the markup and styling.
+
+### _react-hook-form_
+
+ <div className="mb-4 flex items-center">
+  <a href={`https://react-hook-form.com/`} target="_blank">
+    <span>Documentation</span>
+  </a>
+
+<span className="px-2">•</span>
+
+  <a href={`https://react-hook-form.com/docs`} target="_blank">
+    <span>API Reference</span>
+  </a>
+</div>
+
+### _zod_
+
+<a href={`https://zod.dev/`} target="_blank">
+  <span>Documentation</span>
+</a>
+
+<br />
+<br />
+
+---
+
+Components and APIs available:
+
+```jsx
+import {
+  Form,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormDescription,
+  FormMessage,
+  FormField,
+  useFormField
+} from '@gee-ui/react';
+```
+
+Example Usage:
+
+```jsx
+"use client";
+
+import { useForm } from "react-hook-form"; // Must use react-hook-form with form components
+import { zodResolver } from "@hookform/resolvers/zod"; // Use any schema validation library you want
+import { z } from "zod"; // (preferably once that is supported by react-hook-form)
+
+import {
+  Button,
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+  Input,
+  toast
+} from '@gee-ui/react';
+
+const FormSchema = z.object({
+  username: z.string().min(2, {
+    message: "Username must be at least 2 characters.",
+  }),
+})
+
+export function InputForm() {
+  const form = useForm<z.infer<typeof FormSchema>>({
+    resolver: zodResolver(FormSchema),
+    defaultValues: {
+      username: "",
+    },
+  })
+
+  function onSubmit(data: z.infer<typeof FormSchema>) {
+    toast({
+      title: "You submitted the following values:",
+      description: (
+        <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
+          <code className="text-white">{JSON.stringify(data, null, 2)}</code>
+        </pre>
+      ),
+    })
+  }
+
+  return (
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(onSubmit)} className="w-2/3 space-y-6">
+        <FormField
+          control={form.control}
+          name="username"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Username</FormLabel>
+              <FormControl>
+                <Input placeholder="shadcn" {...field} />
+              </FormControl>
+              <FormDescription>
+                This is your public display name.
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <Button type="submit">Submit</Button>
+      </form>
+    </Form>
+  )
+}
+
+```
