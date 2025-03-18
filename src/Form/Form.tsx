@@ -10,7 +10,7 @@ import { cn } from '../utils';
 
 import type { ControllerProps, FieldPath, FieldValues } from 'react-hook-form';
 
-const Form = HookFormProvider;
+const FormRoot = HookFormProvider;
 
 type FormFieldContextValue<
   TFieldValues extends FieldValues = FieldValues,
@@ -137,4 +137,4 @@ const FormMessage = React.forwardRef<HTMLParagraphElement, React.HTMLAttributes<
 );
 FormMessage.displayName = 'FormMessage';
 
-export { useFormField, Form, FormItem, FormLabel, FormControl, FormDescription, FormMessage, FormField };
+export { useFormField, FormRoot as Form, FormItem, FormLabel, FormControl, FormDescription, FormMessage, FormField };
